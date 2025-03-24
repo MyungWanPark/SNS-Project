@@ -23,7 +23,7 @@ Next.js 14(App Router), React를 활용해 **풀스택으로 구현한 SNS 서�
 ✔ **간편 로그인** – OAuth2를 활용한 소셜 로그인(카카오, 구글 로그인) 및 게스트 로그인 구현 <br/>
 ✔ **SEO 최적화** – Dynamic Metadata를 활용하여 페이지 별 SEO최적화 <br/>
 ✔ **CMS 활용** – 비개발직군도 컨텐츠를 쉽게 관리할 수 있도록, Sanity를 활용하여 데이터 관리 <br/>
-✔ **Loading Spinner** – 게시글 조회, 새 게시글 등록 등 사용자가 대기하는 시간에 Loading Spinner를 등록하여 사용자 경험 향상 <br/>
+✔ **Loading Spinner** – 사용자가 대기하는 시간에 Loading Spinner를 등록하여 사용자 경험 향상 <br/>
 <br/>
 
 ## 🛠️ Tech Stack
