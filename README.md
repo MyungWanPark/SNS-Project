@@ -1,6 +1,6 @@
 # SNS-Service(Full Stack)
 
-Next.js, React를 활용해 **풀스택으로 구현한 SNS 서비스** 입니다. <br/>
+Next.js 14(App Router), React를 활용해 **풀스택으로 구현한 SNS 서비스** 입니다. <br/>
 팔로잉 유저의 게시물 보기, Drag N Drop을 활용한 새 게시물 등록, 실시간 사용자 검색, 북마크 등을 구현하였습니다. <br/>
 <br/>
 (아래 이미지를 **클릭**하시면 **큰 화면**으로 보실 수 있습니다.)<br/>
@@ -21,33 +21,22 @@ Next.js, React를 활용해 **풀스택으로 구현한 SNS 서비스** 입니�
 ✔ **새 게시물 등록** – Drag N Drop으로 이미지를 등록하고 컨텐츠를 작성하여 새 게시글 등록  <br/>
 ✔ **사용자 프로필 페이지** <br/> &nbsp; &nbsp;&nbsp;- 팔로우 하기, 팔로워 및 게시글 수 조회 <br/> &nbsp; &nbsp;&nbsp;- 사용자가 작성한 게시물, 좋아요 및 북마크한 게시물을 Grid 형태로 조회 <br/>
 ✔ **간편 로그인** – OAuth2를 활용한 소셜 로그인(카카오, 구글 로그인) 및 게스트 로그인 구현 <br/>
+✔ **SEO 최적화** – Dynamic Metadata를 활용하여 페이지 별 SEO최적화 <br/>
 ✔ **CMS 활용** – 비개발직군도 컨텐츠를 쉽게 관리할 수 있도록, Sanity를 활용하여 데이터 관리 <br/>
 ✔ **Loading Spinner** – 게시글 조회, 새 게시글 등록 등 사용자가 대기하는 시간에 Loading Spinner를 등록하여 사용자 경험 향상 <br/>
 <br/>
 
 ## 🛠️ Tech Stack
-
-### Frontend
-- **✨ UI** - React, MUI <br/>
-- **📃 Language** - TypeScript  <br/>
-- **⚛️ 네비게이션** - React Router Dom  <br/>
-- **🌐 전역 상태 관리** - Redux  <br/>
-- **🎯 네트워크 상태 관리** - Tanstack Query  <br/>
-- **🎨 스타일링** - Tailwind CSS <br/> 
-- **📊 차트 라이브러리** - Apex Chart <br/>
-
-### Backend
-- **🌏 서버** - Node.js with Express
-- **📃 Language** - TypeScript  <br/>
-- **🗄️ Database** - MySQL, Sequelize ORM
-- **🔑 사용자 인증** - OAuth2 with Kakao, JWT
-- **🧱 MVC architecture**
+- **✨ Framework, UI Library** - Next.js 14 (App Router), React <br/>
+- **📃 Language** - TypeScript <br/>
+- **🚥 유닛 테스트** - Jest, Testing-Library <br/>
+- **🎯 네트워크 상태 관리** - SWR <br/>
+- **🗄️ Database** - CMS with Sanity <br/> 
+- **🔑 사용자 인증** - NextAuth.js with JWT(Kakao, Google Login)
+- **🎨 스타일링** - Tailwind CSS <br/>
 - **📡 RESTful API**
+- **🚀 Deployment** - Vercel
 
-### Deployment
-- **🚀 Frontend** - Netlify
-- **🖥️ Backend** - CloudType
-- **🗄️ DB** - CloudType
 <br/>
 
 ## 💻 Installation & Setup
@@ -55,33 +44,23 @@ Next.js, React를 활용해 **풀스택으로 구현한 SNS 서비스** 입니�
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/MyungWanPark/shopping-mall-frontend.git
-git clone https://github.com/MyungWanPark/shopping-mall-backend.git
+git clone https://github.com/MyungWanPark/SNS-Project.git
 ```
 
 ### 2️⃣ Install dependencies
 ```bash
-cd shopping-mall-frontend
-npm install
-cd shopping-mall-backend
-npm install
+cd SNS-Project
+yarn install
 ```
 
 ### 3️⃣ Run the application(개발 환경, .env 파일 필요)
 
 ### Frontend
 ```bash
-npm run start
+yarn dev
 ```
 개발 모드 환경: http://localhost:3000
 
-### Backend
-```bash
-npm run build
-npm run start:dev
-```
-
-개발 모드 환경: http://localhost:8080
 <br/>
 <br/>
 
