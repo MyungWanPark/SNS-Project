@@ -21,7 +21,7 @@ export default function SideBar({ user: { name, username, image } }: Props) {
                 About · Help · Api · Press · Jobs · Privacy · Terms
             </p>
             <p className="text-sm font-bold text-neutral-500 mt-8">
-                @Copyright Instogram from metal
+                @Copyright SNS Project from MW
             </p>
         </section>
     );

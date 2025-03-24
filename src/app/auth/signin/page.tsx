@@ -13,7 +13,7 @@ type Props = {
 
 export const metadata: Metadata = {
     title: "SignIn",
-    description: "Signup or Login to Instogram",
+    description: "Signup or Login to My SNS",
 };
 
 export default async function SignInPage({

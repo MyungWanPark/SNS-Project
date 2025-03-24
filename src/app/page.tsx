@@ -8,7 +8,7 @@ import { authOptions } from "@/auth/authOptions";
 
 export const metadata: Metadata = {
     title: "Home",
-    description: "PhotoLists of Instogram followers",
+    description: "PhotoLists of followers",
 };
 
 export default async function Home() {
