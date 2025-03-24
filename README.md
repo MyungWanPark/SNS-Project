@@ -1,216 +1,75 @@
-## 주제: Next.js를 활용하여 사용자 경험 중심의 인스타그램 구현
-역할 및 범위: 풀스택, 개인 프로젝트
+# SNS-Service(Full Stack)
+
+Next.js 14(App Router), React를 활용해 **풀스택으로 구현한 SNS 서비스** 입니다. <br/>
+팔로잉 유저의 게시물 보기, Drag N Drop을 활용한 새 게시물 등록, 실시간 사용자 검색, 북마크 등을 구현하였습니다. <br/>
+<br/>
+(아래 이미지를 **클릭**하시면 **큰 화면**으로 보실 수 있습니다.)<br/>
+<img src="https://github.com/user-attachments/assets/2776ca6e-611c-4a29-a3b8-2abdc6e0147d" width="800" style="border: 2px solid red; border-radius: 8px;"/>
+
+## 🔗 Live Demo <br/>
+👉 [SNS 서비스 둘러보기](https://instogram-nextjs.vercel.app/) <br/>
+<br/>
+
+## 🚀 Key Features
+✔ **팔로잉 유저 게시글 보기** – 로그인 사용자가 팔로잉 하는 유저의 게시글 조회<br/>
+✔ **좋아요 및 북마크** – 좋아요 및 북마크 시 UI 변경 및 사용자 프로필 페이지에 해당 게시물 저장 <br/>
+✔ **즉각적 UI 동기화** – 좋아요 및 댓글 작성 시, Optimistic UI를 활용하여 DB변경과 동시에 즉각적 UI 동기화 <br/>
+✔ **댓글 작성 및 조회** – 게시글에 댓글 작성 및 해당 게시물에 다른 사용자가 작성한 댓글 조회 기능 <br/>
+✔ **상세 게시글 조회** – 게시글 클릭 시, 모달을 활용해 게시물의 상세 정보 조회 기능 <br/>
+✔ **실시간 사용자 조회** – 사용자 닉네임 또는 이름으로 실시간 검색 기능, 팔로워, 팔로잉 수 등 기본 정보 표시 <br/>
+✔ **Debounce 활용** – 실시간 사용자 검색 시, 서버 부하를 감소시키기 위해 키워드 작성 완료 후 요청을 보내도록 Debounce 활용 <br/>
+✔ **새 게시물 등록** – Drag N Drop으로 이미지를 등록하고 컨텐츠를 작성하여 새 게시글 등록  <br/>
+✔ **사용자 프로필 페이지** <br/> &nbsp; &nbsp;&nbsp;- 팔로우 하기, 팔로워 및 게시글 수 조회 <br/> &nbsp; &nbsp;&nbsp;- 사용자가 작성한 게시물, 좋아요 및 북마크한 게시물을 Grid 형태로 조회 <br/>
+✔ **간편 로그인** – OAuth2를 활용한 소셜 로그인(카카오, 구글 로그인) 및 게스트 로그인 구현 <br/>
+✔ **SEO 최적화** – Dynamic Metadata를 활용하여 페이지 별 SEO최적화 <br/>
+✔ **CMS 활용** – 비개발직군도 컨텐츠를 쉽게 관리할 수 있도록, Sanity를 활용하여 데이터 관리 <br/>
+✔ **Loading Spinner** – 게시글 조회, 새 게시글 등록 등 사용자가 대기하는 시간에 Loading Spinner를 등록하여 사용자 경험 향상 <br/>
+<br/>
+
+## 🛠️ Tech Stack
+- **✨ Framework, UI Library** - Next.js 14 (App Router), React <br/>
+- **📃 Language** - TypeScript <br/>
+- **🚥 유닛 테스트** - Jest, Testing-Library <br/>
+- **🎯 네트워크 상태 관리** - SWR <br/>
+- **🗄️ Database** - CMS with Sanity <br/> 
+- **🔑 사용자 인증** - NextAuth.js with JWT(Kakao, Google Login)
+- **🎨 스타일링** - Tailwind CSS <br/>
+- **📡 RESTful API**
+- **🚀 Deployment** - Vercel
 
 <br/>
 
-> Click the link to see website.&nbsp;&nbsp; [인스타그램](https://instogram-nextjs.vercel.app) <br/>
-(Guest 모드를 클릭하면 빠른 로그인 가능합니다.)
-<br/>
+## 💻 Installation & Setup
 
-<details open="close">
-<summary>Skills Used</summary>
+### 1️⃣ Clone the repository
 
-<br/>
+```bash
+git clone https://github.com/MyungWanPark/SNS-Project.git
+```
 
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white" /> 
-<img src="https://img.shields.io/badge/Next-000000?style=flat&logo=nextdotjs&logoColor=white" />
-<img src="https://img.shields.io/badge/React-3998B6?style=flat&logo=react&logoColor=white" /> 
-<img src="https://img.shields.io/badge/TailwindCSS-38BDF8?style=flat&logo=Tailwind CSS&logoColor=white" />
-<img src="https://img.shields.io/badge/Sanity-F36458?style=flat&logo=sanity&logoColor=white" />
-<img src="https://img.shields.io/badge/SWR-334155?style=flat&logo=swr&logoColor=white" />
-<img src="https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white" />
-<img src="https://img.shields.io/badge/Next--Auth-8432D9?style=flat" />
+### 2️⃣ Install dependencies
+```bash
+cd SNS-Project
+yarn install
+```
 
-- 개발 언어: Typescript 5
+### 3️⃣ Run the application(개발 환경, .env 파일 필요)
 
-- 프레임워크: Next.js 14.1.1
-
-- UI: React.js 18
-
-- CMS(Content Management System): Sanity 3.30.1
-   
-- 네트워크 상태관리 라이브러리: SWR 2.2.5
-
-- 배포: Vercel
- 
-- 인증: Next-Auth 4.24.7
-
-</details>
-<br/>
-
-### 상세 설명
-
-총 5개의 페이지로 구성되었습니다.
-
-1. [홈](#홈페이지)
-
-2. [사용자 검색](#사용자-검색-페이지)
-
-3. [새로운 게시물 작성](#새로운-게시물-작성-페이지)
-
-4. [사용자 프로필](#사용자-프로필-페이지)
-
-5. [로그인](#로그인-페이지)
-
-<br/>
-
-### 공통 기능
----
-- 사용자 정보가 필요하기 때문에 **로그인**이 필요한 페이지 입니다.
-
-  1. 홈
-
-  2. 새로운 게시물 작성
-
-  3. 자신의 프로필 페이지
-
-<br/>
-
-- (해당 페이지를 로그인 하지 않고 방문할 경우, **Sign In** 페이지로 이동할 수 있게 구현하였습니다.)
-
-<br/>
-
-- 특정 페이지로 이동하면 navbar의 **아이콘 색을 검정색**으로 표현하여 **현재 머물고 있는 페이지를 확인**할 수 있도록 구현하였습니다.
-
-<br/>
-
-### 홈페이지
-
-<br/>
-
-<img width="1280" alt="post list-min" src="https://github.com/MyungWanPark/instogram-nextjs/assets/56289900/c3981b08-08cd-470d-8f1b-239486797a36">
+### Frontend
+```bash
+yarn dev
+```
+개발 모드 환경: http://localhost:3000
 
 <br/>
 <br/>
 
-주요 기능
-
-- 상단에 로그인한 사용자가 팔로잉 하고 있는 **유저들의 목록**을 보여줍니다.
-    - 해당 유저를 클릭하면 유저의 **프로필 페이지**로 이동합니다.
-  
+## 🏗️ 향후 개선 사항
+- ⭐ 결제 기능 구현
+- ⭐ 위시리스트, 리뷰 기능 구현
+- ⭐ 알림 기능 구현
 <br/>
 
-- 자신이 작성하거나 팔로잉한 유저들이 작성한 **게시물**을 보여줍니다. <br/>
-(demo 에서는 효과적으로 시연하기 위해 모든 게시물을 볼 수 있게 구현했습니다.)
-
-<br/>
-다음은 게시물 내에서 구현한 기능들입니다.
-  
-  - 작성자의 아바타 **이미지 및 이름**을 표시하였습니다.
-
-  - **좋아요 및 북마크**를 할 수 있습니다.
-  - **좋아요**를 받은 **갯수**를 알 수 있습니다.
-  - 설명글을 표시하였습니다.
-  - **작성한 시간**을 상대적인 시간으로 나타내였습니다. ex. 2 Days ago
-  - 댓글 기능
-    - 입력하지 않으면 버튼이 **비활성화** 됩니다.
-
-    - **댓글의 갯수**를 확인할 수 있습니다.
-    - 댓글을 입력하면 **즉각적으로 업데이트**가 됩니다.
-    - 이미지 또는 view all comments를 누르면 **상세 게시물 페이지**로 이동합니다.
-    - 상세 게시물 페이지 기능
-      - **좋아요, 북마크** 기능이 있습니다.
-
-      - **댓글**을 남길 수 있습니다.
-      - 상세 페이지에서 좋아요, 북마크를 누르면 바깥 페이지도 **즉시 동기화**가 됩니다.
-
-<br/>
-
-### 사용자 검색 페이지
-
-<br/>
-
-<img width="1274" alt="검색 결과" src="https://github.com/MyungWanPark/instogram-nextjs/assets/56289900/03810255-8795-46fd-9021-63d3d94c95b3">
-
-<br/>
-<br/>
-
-주요 기능
-
-- 입력란에 아무것도 입력하지 않으면 **전체 사용자**가 나타납니다.
-
-- 각 사용자별 유저명, 사용자 이름, 팔로워 숫자, 팔로잉 숫자를 보여줍니다
-- 유저 이름 또는 사용자 이름으로 **검색**할 수 있습니다.
-- 유저 이름을 클릭하면, 해당 **유저의 홈페이지**로 이동합니다.
-
-<br/>
-
-### 새로운 게시물 작성 페이지
-
-<br/>
-
-<img width="1276" alt="upload post-min" src="https://github.com/MyungWanPark/instogram-nextjs/assets/56289900/ad6a5403-5a95-4bfd-8557-c8add5209528">
-
-<br/>
-<br/>
-
-주요 기능
-
-- 새로운 이미지를 **클릭하여 첨부**하거나, **드래그 앤 드롭으로 첨부** 할 수 있습니다. 이때 드래그 하면 UI를 **파란색으로 강조**하도록 구현하였습니다.
-
-- 이미지를 첨부하면 해당 **이미지를 즉시 확인**해볼 수 있도록 하였습니다.
-- 아래에는 사용자가 텍스트를 입력할 수 있습니다.
-- publish 버튼을 누르면 작성이 **완료**됩니다.
-- 작성이 완료되면 사용자를 **홈 경로로 이동**시키고, 새로운 게시물을 **피드에서 확인**할 수 있습니다.
-
-<br/>
-
-### 사용자 프로필 페이지
-
-<br/>
-
-<img width="1276" alt="profile image-min" src="https://github.com/MyungWanPark/instogram-nextjs/assets/56289900/c86cd247-91c8-4aaf-871e-de9d282fc82d">
-
-<br/>
-<br/>
-유저 프로필 페이지 이동 방법 2가지
-
-<br/>
-
-1. 홈페이지에서 **팔로잉 목록에 있는 사용자를 클릭**하면 해당 사용자의 프로필 페이지로 이동합니다.
-
-2. **네비게이션에서 사용자 이미지를 클릭**하면 로그인한 사용자의 프로필 페이지로 이동합니다.
-
-<br/>
-
-주요 기능
-
-- 사용자 검색을 통해 들어간 사용자 페이지에서 **팔로우, 언팔로우** 버튼을 누를 수 있습니다.
-
-- 팔로우, 언팔로우 버튼을 누르면 **follwers** 숫자가 증가하거나, 감소합니다.
-- 사용자의 아바타 이미지, 이름, 게시물 갯수, 팔로워, 팔뢰잉 갯수를 알 수 있습니다.
-- 다음과 같은 게시물 목록을 볼 수 있습니다.
-   -    본인이 **작성한** 게시물 목록
-   -    **북마크**로 저장한 게시물 목록
-   -    **좋아요**를 누른 게시물 목록
-- 해당 게시물을 클릭하면 **상세 게시물**이 나옵니다.
-- 모달창의 바깥 버튼을 누르면 모달이 지워집니다.
-
-<br/>
-
-### 로그인 페이지
-
-<br/>
-
-<img width="1276" alt="login_page-min" src="https://github.com/MyungWanPark/instogram-nextjs/assets/56289900/40a12b10-44fc-41c4-bacb-6554986da984">
-
-<br/>
-<br/>
-
-주요 기능
-
-- **Guest, Google, Kakao** 계정으로 소셜 로그인 할 수 있습니다. <br/>
-
-- **Guest** 로그인은 빠른 로그인을 위한 기능입니다. 별도의 인증을 하지 않아도 게스트로 로그인 할 수 있습니다.
-
-<br/>
-
-**로그인 권한이 필요한 페이지**
-
-1. 홈
-
-2. 새로운 게시물 작성
-
-3. 자신의 프로필 페이지)
-
-1~3 번의 페이지에 **로그인 하지 않는 상태로 접근한다면** 로그인 페이지로 **redirect** 되도록 구현하였습니다.
+## 📬 Contact & Feedback
+👨‍💻 **Developer**: 박명완 <br/>
+📧 **Email**: mywanpark@gmail.com <br/>
