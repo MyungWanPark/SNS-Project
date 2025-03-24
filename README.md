@@ -7,7 +7,7 @@ Next.js 14(App Router), React를 활용해 **풀스택으로 구현한 SNS 서�
 <img src="https://github.com/user-attachments/assets/2776ca6e-611c-4a29-a3b8-2abdc6e0147d" width="800" style="border: 2px solid red; border-radius: 8px;"/>
 
 ## 🔗 Live Demo <br/>
-👉 [SNS 서비스 둘러보기](https://instogram-nextjs.vercel.app/) <br/>
+👉 [SNS 서비스 둘러보기](https://social-network-sideproject.vercel.app/) <br/>
 <br/>
 
 ## 🚀 Key Features
