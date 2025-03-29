@@ -109,6 +109,9 @@ export default function NewPost({ user: { username, image } }: Props) {
                         <div className="flex flex-col items-center justify-center pointer-events-none">
                             <FileIcon />
                             <p>Drag and Drop your image here or click</p>
+                            <p className="text-xs text-gray-500">
+                                Maximum Image size 4MB
+                            </p>
                         </div>
                     )}
                     {file && (
