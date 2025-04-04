@@ -7,8 +7,9 @@ Next.js 14(App Router), React를 활용해 **풀스택으로 구현한 SNS 서�
 <img src="https://github.com/user-attachments/assets/9af2e67d-aac2-42d6-9679-852df70d8cbc" width="800" style="border: 2px solid red; border-radius: 8px;"/>
 
 ## 🔗 Live Demo <br/>
-👉 [SNS 서비스 둘러보기](https://social-network-sideproject.vercel.app/) <br/>
+👉 [SNS 서비스 둘러보기](https://social-network-sideproject.vercel.app/) &nbsp; (Guest를 이용하면 바로 로그인 가능합니다.)
 <br/>
+<br/> 
 
 ## 🚀 Key Features
 ✔ **팔로잉 유저 게시글 보기** – 로그인 사용자가 팔로잉 하는 유저의 게시글 조회<br/>
