@@ -28,15 +28,15 @@ Next.js 14(App Router), React를 활용해 **풀스택으로 구현한 SNS 서�
 <br/>
 
 ## 🛠️ Tech Stack
-- **✨ Framework, UI Library** - Next.js 14 (App Router), React <br/>
-- **📃 Language** - TypeScript <br/>
-- **🚥 유닛 테스트** - Jest, Testing-Library <br/>
-- **🎯 네트워크 상태 관리** - SWR <br/>
-- **🗄️ Database** - CMS with Sanity <br/> 
-- **🔑 사용자 인증** - NextAuth.js with JWT(Kakao, Google Login)
-- **🎨 스타일링** - Tailwind CSS <br/>
-- **📡 RESTful API**
-- **🚀 Deployment** - Vercel
+- **Framework, UI Library** - Next.js 14 (App Router), React <br/>
+- **Language** - TypeScript <br/>
+- **유닛 테스트** - Jest, Testing-Library <br/>
+- **네트워크 상태 관리** - SWR <br/>
+- **Database** - CMS with Sanity <br/> 
+- **사용자 인증** - NextAuth.js with JWT(Kakao, Google Login)
+- **스타일링** - Tailwind CSS <br/>
+- **RESTful API**
+- **Deployment** - Vercel
 
 <br/>
 
