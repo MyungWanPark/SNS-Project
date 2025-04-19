@@ -1,7 +1,7 @@
 # SNS-Service(Full Stack)
 
 Next.js 14(App Router), React를 활용해 **풀스택으로 구현한 SNS 서비스** 입니다. <br/>
-팔로잉 유저의 게시물 보기, Drag N Drop을 활용한 새 게시물 등록, 실시간 사용자 검색, 북마크 등을 구현하였습니다. <br/>
+팔로잉 유저의 게시물 보기, Drag & Drop을 활용한 새 게시물 등록, 실시간 사용자 검색, 북마크 등을 구현하였습니다. <br/>
 <br/>
 (아래 이미지를 **클릭**하시면 **큰 화면**으로 보실 수 있습니다.) <br/>
 <img src="https://github.com/user-attachments/assets/9af2e67d-aac2-42d6-9679-852df70d8cbc" width="800" style="border: 2px solid red; border-radius: 8px;"/>
