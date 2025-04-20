@@ -12,6 +12,24 @@ Next.js 14(App Router)와 React를 기반으로 **풀스택으로 구현한 SNS 
 <br/>
 <br/> 
 
+## 🛠️ Tech Stack
+### 🖥️ Frontend
+- **Framework**: Next.js 14 (App Router)
+- **Library**: React
+- **Language**: TypeScript
+- **Network State Management**: SWR
+- **Styling**: Tailwind CSS
+- **Authentication**: NextAuth.js (OAuth2 with Kakao, Google), JWT
+- **Testing**: Jest, React Testing Library
+
+### 🧠 Backend / CMS
+- **Database**: Sanity (Headless CMS)
+- **API Design**: RESTful API
+
+### ☁️ Deployment
+- **Hosting**: Vercel
+<br/>
+
 ## 🚀 Key Features
 
 ### 📌 소셜 기능
@@ -36,19 +54,6 @@ Next.js 14(App Router)와 React를 기반으로 **풀스택으로 구현한 SNS 
 - **Guest 모드** – 체험 전용 계정 제공으로 즉시 사용 가능  
 - **SEO 최적화** – Dynamic Metadata를 활용한 페이지별 SEO 대응  
 - **Sanity CMS** – 비개발자도 콘텐츠를 쉽게 관리할 수 있도록 CMS 도입  
-
-<br/>
-
-## 🛠️ Tech Stack
-- **Framework, UI Library** - Next.js 14 (App Router), React <br/>
-- **Language** - TypeScript <br/>
-- **유닛 테스트** - Jest, Testing-Library <br/>
-- **네트워크 상태 관리** - SWR <br/>
-- **Database** - CMS with Sanity <br/> 
-- **사용자 인증** - NextAuth.js with JWT(Kakao, Google Login)
-- **스타일링** - Tailwind CSS <br/>
-- **RESTful API**
-- **Deployment** - Vercel
 
 <br/>
 
